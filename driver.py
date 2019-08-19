@@ -2,6 +2,7 @@
 
 import numpy as np, os, sys
 from get_sepsis_score import load_sepsis_model, get_sepsis_score
+from transformer import Transformer, ModifiedStandardScaler
 
 def load_challenge_data(file):
     with open(file, 'r') as f:
@@ -21,6 +22,7 @@ def save_challenge_predictions(file, scores, labels):
         f.write('PredictedProbability|PredictedLabel\n')
         for (s, l) in zip(scores, labels):
             f.write('%g|%d\n' % (s, l))
+
 
 if __name__ == '__main__':
     # Parse arguments.

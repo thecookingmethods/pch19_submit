@@ -1,0 +1,3 @@
+model_checkpoint_path: "/home/darekk/Documents/dev/pch_19/pch_19_dev/pch19/prototypes/m_201981971627/best_recall/m"
+all_model_checkpoint_paths: "/home/darekk/Documents/dev/pch_19/pch_19_dev/pch19/prototypes/m_201981971627/best_loss/m"
+all_model_checkpoint_paths: "/home/darekk/Documents/dev/pch_19/pch_19_dev/pch19/prototypes/m_201981971627/best_recall/m"
