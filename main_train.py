@@ -7,7 +7,6 @@ import shutil
 from parse_dataset import PICKLED_DIR, PICKLED_FILE_DATA
 from transformer import Transformer, ModifiedStandardScaler
 from patient_data import PatientData
-from graph_builder import GraphBuilder
 
 from model import Model, MODEL_ROOT_BEST_LOSS, MODEL_ROOT_BEST_FSCORE, MODEL_ROOT_BEST_RECALL, \
     BATCH_SIZE_TRAINING, BATCH_SIZE_EVAL, LEARNING_RATE

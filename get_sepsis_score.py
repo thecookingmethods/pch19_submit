@@ -2,16 +2,14 @@
 
 import numpy as np
 import os
-import pickle
 
-from model import Model, MODEL_ROOT_DIR
+from main_train import Model, load_pickled_data
+from model import MODEL_ROOT_DIR
 from parse_dataset import PatientData
-from transformer import Transformer, ModifiedStandardScaler
 
-MODEL_NAME = 'm_201981971627/best_recall'
-DECISION_THERSHOLD = 0.00
-PICKLED_DIR = 'pickled_data'
-PICKLED_FILE_DATA = 'data.pkl'
+MODEL_NAME = 'm_201981971627/best_loss'
+DECISION_THERSHOLD = 0.30
+
 
 def get_sepsis_score(data, model):
     # input defined by physionet challenge
@@ -34,8 +32,3 @@ def load_sepsis_model():
                   only_eval=True)
     model.__enter__()
     return model
-
-
-def load_pickled_data(filename, dirname):
-    with open(os.path.join(dirname, '{}_{}'.format(filename, PICKLED_FILE_DATA)), 'rb') as f:
-        return pickle.load(f)
