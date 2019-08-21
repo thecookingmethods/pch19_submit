@@ -5,8 +5,10 @@ import os
 import pickle
 
 from model import Model
+
 from parse_dataset import PatientData
 from transformer import Transformer, ModifiedStandardScaler
+
 
 MODEL_ROOT_DIR = os.path.dirname(__file__)
 
@@ -14,6 +16,7 @@ MODEL_NAME = 'prototypes/m_20190821072955/best_loss'
 DECISION_THERSHOLD = 0.30
 PICKLED_DIR = 'pickled_data'
 PICKLED_FILE_DATA = 'data.pkl'
+
 
 def get_sepsis_score(data, model):
     # input defined by physionet challenge

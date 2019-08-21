@@ -162,7 +162,6 @@ class Model(object):
                        PH_LR=self._get_tensor_by_str(TensorNames.PH_LR),
                        PH_DEMO=self._get_tensor_by_str(TensorNames.PH_DEMO),
                        PH_EPOCH_IDX=self._get_tensor_by_str(TensorNames.PH_EPOCH_IDX))
-
         self.logits = self._get_tensor_by_str(TensorNames.OUTPUT_LOGITS)
         self.prediction = self._get_tensor_by_str(TensorNames.OUTPUT_PREDICTIONS)
 
@@ -444,7 +443,7 @@ class Model(object):
                 }
             )
 
-            sepsis_probs = preds[0, 0, 1]
+            sepsis_prob = preds[0, 0, 1]
 
             if USE_SOFT_TARGETS:
                 preds = np.argmax(preds, axis=-1)
@@ -458,7 +457,7 @@ class Model(object):
                 flat_true = np.asarray(y).flatten()
                 flat_pred = np.asarray(preds).flatten()
             labels_list.extend(flat_true)
-            pred_list.extend([sepsis_probs])
+            pred_list.extend([sepsis_prob])
 
             if is_last_batch:
                 break
