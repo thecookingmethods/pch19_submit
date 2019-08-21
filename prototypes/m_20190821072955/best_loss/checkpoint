@@ -1,0 +1,4 @@
+model_checkpoint_path: "/physionet2019/prototypes/m_20190821072955/best_loss/m"
+all_model_checkpoint_paths: "/physionet2019/prototypes/m_20190821072955/best_recall/m"
+all_model_checkpoint_paths: "/physionet2019/prototypes/m_20190821072955/best_f_score/m"
+all_model_checkpoint_paths: "/physionet2019/prototypes/m_20190821072955/best_loss/m"

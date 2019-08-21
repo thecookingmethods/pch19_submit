@@ -4,12 +4,14 @@ import numpy as np
 import os
 import pickle
 
-from model import Model, MODEL_ROOT_DIR
+from model import Model
 from parse_dataset import PatientData
 from transformer import Transformer, ModifiedStandardScaler
 
-MODEL_NAME = 'm_201981971627/best_recall'
-DECISION_THERSHOLD = 0.00
+MODEL_ROOT_DIR = os.path.dirname(__file__)
+
+MODEL_NAME = 'prototypes/m_20190821072955/best_loss'
+DECISION_THERSHOLD = 0.30
 PICKLED_DIR = 'pickled_data'
 PICKLED_FILE_DATA = 'data.pkl'
 

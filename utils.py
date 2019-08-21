@@ -3,12 +3,8 @@ import time
 
 def timeit(method):
     def timer(*args, **kwargs):
-        print('Running {}()...'.format(method.__name__))
-        start = time.time()
-        result = method(*args, **kwargs)
-        end = time.time()
 
-        print('{}() finished, took {:0.2f} seconds\n'.format(method.__name__, end - start))
+        result = method(*args, **kwargs)
         return result
     return timer
 
