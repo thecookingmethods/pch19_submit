@@ -1,0 +1,3 @@
+model_checkpoint_path: "C:\\Users\\Mateusz\\Documents\\GitHub\\pch19\\model\\m_20190821072955\\best_recall\\m"
+all_model_checkpoint_paths: "C:\\Users\\Mateusz\\Documents\\GitHub\\pch19\\model\\m_20190821072955\\best_loss\\m"
+all_model_checkpoint_paths: "C:\\Users\\Mateusz\\Documents\\GitHub\\pch19\\model\\m_20190821072955\\best_recall\\m"

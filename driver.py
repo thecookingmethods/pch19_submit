@@ -3,6 +3,11 @@
 import numpy as np, os, sys
 from get_sepsis_score import load_sepsis_model, get_sepsis_score
 from transformer import Transformer, ModifiedStandardScaler
+from patient_data import PatientData
+
+PatientData = PatientData
+Transformer = Transformer
+ModifiedStandardScaler = ModifiedStandardScaler
 
 def load_challenge_data(file):
     with open(file, 'r') as f:
