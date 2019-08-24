@@ -29,8 +29,6 @@ def get_sepsis_score(data, model):
     y_true, y_prob = model.get_predictions([patient_data], 1)
 
     u_adj = match_prob(y_prob[0], data.shape[0], DECISION_THERSHOLD+0.5)
-    if u_adj > 1:
-        print(u_adj)
     return u_adj, np.round(u_adj + DECISION_THERSHOLD)
 
 
